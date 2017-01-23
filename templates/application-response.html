@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Application Response{% endblock %}
+
+{% block body %}
+
+<!-- fill this in -->
+<p>Thank you, {{ first_name }} {{ last_name }}, for applying to be a {{ job }}. Your minimum salary requirement is 
+    {% if salary % 1 != 0 %}
+        {{ "${:,.2f}".format(salary) }}.
+    {% else %}
+        {{ "${:,.0f}".format(salary) }}.
+    {% endif %}
+</p>
+
+
+{% endblock %}

@@ -1,0 +1,11 @@
+input {
+    background-color: yellow;
+}
+
+#lastname {
+    font-weight: bold;
+}
+
+#descriptiontext {
+    border: 3px solid black;
+}

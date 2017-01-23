@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Shopping Cart{% endblock %}
+
+{% block body %}
+
+
+  <h1>Application Form</h1>
+
+  <p><span id="descriptiontext">Please enter your name, salary requirement as a 
+    number without commas, and select the job you are applying for.</span></p>
+
+  <form action="/application-success" method="POST">
+    <label for="firstname">First Name:</label>
+    <input id="firstname" type="text" name="firstname"><br>
+    <label for="lastname">Last Name: </label>
+    <input id="lastname" type="text" name="lastname"><br>
+    <label for="salaryrequirement">Salary Requirement (ex. '100000'):</label>
+    <input id="salaryrequirement" type="text" name="salaryrequirement"><br>
+
+    <label for="jobdesired">Job Desired:</label>
+    <select id="jobdesired" name="select">
+      {% for job in jobs %}
+        <option value="{{job}}">{{job}}</option>
+        {% endfor %}
+    </select><br><br>
+    <input type="submit" name="submit">
+
+
+
+  </form>
+
+{% endblock %}
